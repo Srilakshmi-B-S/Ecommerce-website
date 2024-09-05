@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <h1>Order Confirmation</h1>
+    <p>Thank you for your purchase, {{ delivery.name }}!</p>
+    <p>Product: {{ delivery.product.name }}</p>
+    <p>Price: Rs{{ delivery.product.price }}</p>
+    <p>Payment Status: {{ delivery.payment_status }}</p>
+    <p>Payment Method: {{ delivery.payment_method }}</p>
+    <p>Payment Reference: {{ delivery.payment_reference }}</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery Details</title>
+    <style>
+        .product-details {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .product-details img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+        .product-details div {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delivery Details</h1>
+
+    <div class="product-details">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        <div>
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+            <p>Price: Rs{{ product.price }}</p>
+        </div>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Proceed to Payment</button>
+    </form>
+</body>
+</html>

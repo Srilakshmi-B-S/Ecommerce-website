@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+</head>
+<body>
+    <h1>Payment for {{ delivery.product.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="payment_method">Payment Method:</label>
+        <input type="text" id="payment_method" name="payment_method" required><br>
+        <label for="payment_reference">Payment Reference:</label>
+        <input type="text" id="payment_reference" name="payment_reference" required><br>
+        <button type="submit">Complete Payment</button>
+    </form>
+</body>
+</html>
